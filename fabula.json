@@ -1,0 +1,3331 @@
+{
+    "waldek_hardcore_odyseja": {
+        "thread_id": "waldek_hardcore_odyseja",
+        "title": "Waldek 'Centuś' Szymula: Odyseja na Ostro",
+        "character_info": {
+            "imie_nazwisko": "Waldemar Szymula",
+            "pseudonim": "Waldek, 'Centuś'",
+            "miejsce_zamieszkania": "Janów Podlaski, ul. Bandosa (melina)",
+            "szkola": "Zespół Szkół Zawodowych w Białej Podlaskiej im. KEN (ledwo zdaje)",
+            "kierunek": "Technik Programista (4 klasa, na farcie)",
+            "dojazdy": "Rozklekotaną Gardeną, jak akurat kierowca trzeźwy",
+            "wf_status": "Wieczne zwolnienie (papier od lokalnego konowała)",
+            "zainteresowania": [
+                "CS2 (LEM na krzywy ryj)",
+                "LoL (Silver V piekło)",
+                "HLTV (żeby wiedzieć na kogo stawiać drobne)",
+                "2kg hantle (bicek musi być, chociaż jeden)",
+                "Tanie browary",
+                "Mountain Dew (eliksir bogów)"
+            ],
+            "styl_ubioru": "Grubo, najczęściej trzy przepocone bluzy z kapturem, dresy",
+            "dodatkowe_info": [
+                "Ze stadniną koni związany głównie przez kradzież siana na podpałkę.",
+                "Kiedyś odmówił sprzedaży Burka szejkom, ale teraz by się zastanowił za flaszkę dobrej wódki.",
+                "Kurs graficzny SEPTEM – zrobił logo dla lokalnego disco polo, dostał za to kratę piwa."
+            ]
+        },
+        "initial_stats": {
+            "morale": 30,
+            "energia": 50,
+            "kac_power": 0,
+            "szacun_na_dzielni": 5,
+            "szacun_w_kenie": -10,
+            "relacje_z_matka": 10,
+            "hajs_w_kieszeni": 7,
+            "moc_bicka_centusia": 2,
+            "skill_cs": 60,
+            "skill_programowania": 25,
+            "smrod_level": 10,
+            "stan_watraby": 70,
+            "podejrzliwosc_psow": 5,
+            "wiara_w_gowno": 0
+        },
+        "flags": {
+            "zjadl_gowno": false,
+            "apostol_smaku": false,
+            "ma_dlugi_u_sebixa": false,
+            "nakryty_na_sciaganiu": false,
+            "burek_cos_czuje": false,
+            "wkurwil_kierowce_gardeny": false,
+            "wygral_zaklad_hltv": false,
+            "nawalony_jak_stodola": false,
+            "kurs_septem_splacony_piwem": true,
+            "ma_jeszcze_mountain_dew": true,
+            "probowal_gotowac_gowno": false,
+            "ksiadz_zna_herezje": false,
+            "sanepid_ostrzega": false
+        },
+        "inventory": [
+            {
+                "item_id": "stary_nokia_3310",
+                "name": "Nokia 3310 (bateria trzyma tydzień)"
+            },
+            {
+                "item_id": "hantla_2kg_rdzewiejaca",
+                "name": "Hantla 2kg (trochę pordzewiała)"
+            },
+            {
+                "item_id": "polowa_mountain_dew",
+                "name": "Pół butelki Mountain Dew (na czarną godzinę)"
+            },
+            {
+                "item_id": "zapalniczka_bez_gazu",
+                "name": "Zapalniczka (chyba bez gazu)"
+            }
+        ],
+        "scenes": {
+            "pobudka_w_chlewie": {
+                "id": "pobudka_w_chlewie",
+                "description": "Budzisz się. Kurwa, łeb napierdala. Podłoga. Śmierdzi jak w oborze. Co to za brązowa maź na dywanie?",
+                "choices": [
+                    {
+                        "text": "Liznąć maź. Może to nutella.",
+                        "nextScene": "smak_kurwa_objawienia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "energia": -5,
+                                "kac_power": 5,
+                                "smrod_level": 20,
+                                "stan_watraby": -5,
+                                "wiara_w_gowno": 5
+                            },
+                            "flags_set": {
+                                "zjadl_gowno": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wyjść z chaty. Na browara trza skoczyć.",
+                        "nextScene": "ulica_bandosa_kac",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "kac_power": 10,
+                                "szacun_na_dzielni": -2,
+                                "energia": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Poszukać portfela. Może coś zostało.",
+                        "nextScene": "poszukiwanie_portfela",
+                        "effects": {
+                            "stats_change": {
+                                "podejrzliwosc_psow": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "smak_kurwa_objawienia": {
+                "id": "smak_kurwa_objawienia",
+                "description": "To... nie nutella. Ja pierdolę. Masz wizję: Kebab ze Złota mówi ci 'Żryj gówno, będziesz wielki! W GÓWNIE SIŁA!'",
+                "choices": [
+                    {
+                        "text": "Słuchać Złotego Kebaba. Gówno to moja misja!",
+                        "nextScene": "poczatek_sekty_gownojadow",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 15,
+                                "relacje_z_matka": -20,
+                                "morale": 20,
+                                "wiara_w_gowno": 20
+                            },
+                            "flags_set": {
+                                "apostol_smaku": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rzygnąć i zadzwonić do starej.",
+                        "nextScene": "telefon_do_matki_panika",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": 10,
+                                "morale": -15,
+                                "kac_power": -5,
+                                "smrod_level": -10,
+                                "wiara_w_gowno": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "ulica_bandosa_kac": {
+                "id": "ulica_bandosa_kac",
+                "description": "Wytaczasz się na Bandosa. Słońce wali po oczach. Burek patrzy jak na debila. Idzie Seba.",
+                "choices": [
+                    {
+                        "text": "'Siema Seba, pożycz piątaka na klina.'",
+                        "nextScene": "pozyczka_od_seby",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 1
+                            }
+                        }
+                    },
+                    {
+                        "text": "Spierdalać przed Sebą. Wisisz mu dychę.",
+                        "nextScene": "ucieczka_przed_seba",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "podejrzliwosc_psow": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "O kurwa, Julka idzie! (Na przystanku)",
+                        "nextScene": "spotkanie_julki_z_liceum",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "energia": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "poszukiwanie_portfela": {
+                "id": "poszukiwanie_portfela",
+                "description": "Przekopujesz melinę. Same śmieci. Pod łóżkiem... pusta flaszka i twój portfel. Zero hajsu.",
+                "choices": [
+                    {
+                        "text": "Przeszukać kieszenie bluz. Może fuks.",
+                        "nextScene": "szukanie_w_bluzach",
+                        "effects": {
+                            "stats_change": {
+                                "smrod_level": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Iść na przypał do matki po kasę.",
+                        "nextScene": "wizyta_u_matki_po_hajs",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "poczatek_sekty_gownojadow": {
+                "id": "poczatek_sekty_gownojadow",
+                "description": "Misja od Kebaba to nie żarty. Piszesz na murze 'GÓWNO JEST KRÓLEM'. Jakiś dzieciak się gapi.",
+                "choices": [
+                    {
+                        "text": "Nawrócić dzieciaka na wiarę w gówno.",
+                        "nextScene": "nawracanie_dzieciaka",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -5,
+                                "podejrzliwosc_psow": 10,
+                                "wiara_w_gowno": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Poszukać innych podobnych sobie świrów.",
+                        "nextScene": "szukanie_wyznawcow",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "wiara_w_gowno": 2
+                            }
+                        }
+                    },
+                    {
+                        "text": "Stworzyć ulotki o 'Diecie Gównianej Cud'.",
+                        "nextScene": "tworzenie_ulotek_o_gownie",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 1,
+                                "smrod_level": 2,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "telefon_do_matki_panika": {
+                "id": "telefon_do_matki_panika",
+                "description": "Matka drze ryja: 'ZNOWU ŻARŁEŚ JAKIEŚ ŚWIŃSTWO?! ALBO CO GORSZA... ZNOWU TO GÓWNO?!'. Kac jakby mniejszy.",
+                "choices": [
+                    {
+                        "text": "Obiecać poprawę (i tak nie dotrzymasz).",
+                        "nextScene": "obietnica_poprawy_matce",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": 5,
+                                "morale": -2,
+                                "kac_power": -2
+                            }
+                        }
+                    },
+                    {
+                        "text": "Powiedzieć, że to alternatywna medycyna.",
+                        "nextScene": "medycyna_alternatywna_dla_matki",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -15,
+                                "morale": 5,
+                                "szacun_w_kenie": -2,
+                                "wiara_w_gowno": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "pozyczka_od_seby": {
+                "id": "pozyczka_od_seby",
+                "description": "Seba: 'Masz, Centuś. Ale kurwa, oddaj z tym co mi wisisz, bo ci nogi z dupy powyrywam.'",
+                "choices": [
+                    {
+                        "text": "Kupić browara i zapomnieć o długu.",
+                        "nextScene": "browar_za_pozyczke",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 5,
+                                "kac_power": -15,
+                                "morale": 10,
+                                "stan_watraby": -5
+                            },
+                            "flags_set": {
+                                "ma_dlugi_u_sebixa": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Oddać od razu starą dychę (jakimś cudem masz).",
+                        "nextScene": "splata_dlugu_sebie_od_razu",
+                        "condition": {
+                            "stats_greater_equal": {
+                                "hajs_w_kieszeni": 10
+                            }
+                        },
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -5,
+                                "szacun_na_dzielni": 5
+                            },
+                            "flags_set": {
+                                "ma_dlugi_u_sebixa": false
+                            }
+                        }
+                    },
+                    {
+                        "text": "Obiecać, że zaraz ogarniesz hajs (taaa, jasne).",
+                        "nextScene": "obietnica_splaty_dla_seby",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 5,
+                                "morale": -2
+                            },
+                            "flags_set": {
+                                "ma_dlugi_u_sebixa": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_seba": {
+                "id": "ucieczka_przed_seba",
+                "description": "Gonisz jak pojebany. Seba cię nie dogonił. Ale serce ci wali. Chyba potrzebujesz Mountain Dew.",
+                "choices": [
+                    {
+                        "text": "Walnąć resztkę Mountain Dew.",
+                        "condition": {
+                            "inventory_contains": "polowa_mountain_dew"
+                        },
+                        "nextScene": "mountain_dew_boost_ucieczka",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 20,
+                                "kac_power": -5,
+                                "morale": 5
+                            },
+                            "flags_set": {
+                                "ma_jeszcze_mountain_dew": false
+                            },
+                            "inventory_remove": [
+                                {
+                                    "item_id": "polowa_mountain_dew"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Schować się w ZSZ KEN. Tam cię nie znajdzie.",
+                        "nextScene": "zsz_ken_schronienie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -2,
+                                "morale": -3
+                            }
+                        }
+                    },
+                    {
+                        "text": "O kurwa, dresy pod sklepem! Może pomogą?",
+                        "nextScene": "spotkanie_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -5,
+                                "podejrzliwosc_psow": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "szukanie_w_bluzach": {
+                "id": "szukanie_w_bluzach",
+                "description": "Przewracasz stos przepoconych bluz. Wow! Znalazłeś 2 złote i skamieniałą frytkę.",
+                "choices": [
+                    {
+                        "text": "Zjeść frytkę. Białko.",
+                        "nextScene": "konsumpcja_starej_frytki",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 2,
+                                "energia": 1,
+                                "morale": -1,
+                                "smrod_level": 2,
+                                "wiara_w_gowno": -1
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zachować 2 zł. Na później.",
+                        "nextScene": "zachowanie_znalezionego_hajsu",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "wizyta_u_matki_po_hajs": {
+                "id": "wizyta_u_matki_po_hajs",
+                "description": "Matka otwiera. Mina typu 'znowu ten pasożyt'. 'Co chcesz, gnoju?'",
+                "choices": [
+                    {
+                        "text": "'Mamo, daj dyszkę na jedzenie...'",
+                        "nextScene": "prosba_o_hajs_od_matki",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "'Przyszedłem ci pomóc w ogródku!' (ściema)",
+                        "nextScene": "sciema_z_pomoca_matce",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 2,
+                                "skill_programowania": -1
+                            }
+                        }
+                    },
+                    {
+                        "text": "'Mamo, czy próbowałaś kiedyś... nowej diety?'",
+                        "condition": {
+                            "flags_all": [
+                                "apostol_smaku"
+                            ]
+                        },
+                        "nextScene": "propozycja_diety_gownianej_matce",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -30,
+                                "wiara_w_gowno": 5,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "dojazdy_gardena_lekcja": {
+                "id": "dojazdy_gardena_lekcja",
+                "description": "Gardena rzęzi jak stary traktor. Kierowca puszcza disco polo na full. 'Centuś, znowu do tej swojej budy jedziesz?'",
+                "choices": [
+                    {
+                        "text": "Przytaknąć i modlić się, żeby dojechać.",
+                        "nextScene": "lekcja_w_kenie_nuda",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -2,
+                                "energia": -3
+                            }
+                        }
+                    },
+                    {
+                        "text": "Kazać mu spierdalać. Niech se nie pozwala.",
+                        "nextScene": "awantura_w_gardenie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 3,
+                                "morale": 5,
+                                "szacun_w_kenie": -5
+                            },
+                            "flags_set": {
+                                "wkurwil_kierowce_gardeny": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "lekcja_w_kenie_nuda": {
+                "id": "lekcja_w_kenie_nuda",
+                "description": "Siedzisz na informie. Nuda jak chuj. Nauczyciel coś pierdoli o pętlach. Chyba zaśniesz.",
+                "choices": [
+                    {
+                        "text": "Próbować coś zakodzić (może jakiś wirus?).",
+                        "nextScene": "proby_kodzenia_wirusa",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 2,
+                                "morale": 1,
+                                "szacun_w_kenie": 1
+                            }
+                        }
+                    },
+                    {
+                        "text": "Grać w CSa na telefonie pod ławką.",
+                        "nextScene": "cs_pod_lawka",
+                        "effects": {
+                            "stats_change": {
+                                "skill_cs": 3,
+                                "szacun_w_kenie": -2,
+                                "energia": -1
+                            }
+                        }
+                    },
+                    {
+                        "text": "O! Jest konkurs programowania! (Plakat na ścianie)",
+                        "nextScene": "konkurs_programowania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "energia": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "browar_za_pozyczke": {
+                "id": "browar_za_pozyczke",
+                "description": "Żuberek wchodzi jak złoto. Kac mija. Świat jest piękny. Przez chwilę.",
+                "choices": [
+                    {
+                        "text": "Jeszcze jeden! A co mi tam!",
+                        "nextScene": "kolejny_browar_na_kreche",
+                        "condition": {
+                            "stats_greater_equal": {
+                                "hajs_w_kieszeni": 3
+                            }
+                        },
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -3,
+                                "kac_power": 5,
+                                "morale": 5,
+                                "stan_watraby": -7
+                            },
+                            "flags_set": {
+                                "nawalony_jak_stodola": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Trzeba iść do szkoły, bo stara znowu będzie sapać.",
+                        "nextScene": "dojazdy_gardena_lekcja",
+                        "effects": {}
+                    },
+                    {
+                        "text": "O, dresy pod sklepem! Może się dołożą?",
+                        "nextScene": "spotkanie_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 2,
+                                "energia": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "nawracanie_dzieciaka": {
+                "id": "nawracanie_dzieciaka",
+                "description": "Dzieciak ucieka z płaczem, krzycząc 'PEDOFIL GÓWNOJAD!'. Jakiś stary chuj dzwoni na policję.",
+                "choices": [
+                    {
+                        "text": "Spierdalać, póki można!",
+                        "nextScene": "ucieczka_przed_psami_misja",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "morale": -10,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Czekać na bagiety. Wytłumaczyć im misję.",
+                        "nextScene": "dyskusja_z_bagietami_o_gownie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "relacje_z_matka": -30
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_psami_misja": {
+                "id": "ucieczka_przed_psami_misja",
+                "description": "Psy wyją w oddali. Kurwa, trzeba się gdzieś schować. Widzisz kontener na śmieci i wejście do piwnicy.",
+                "choices": [
+                    {
+                        "text": "Skok do kontenera. Klasyka.",
+                        "nextScene": "ukrycie_w_kontenerze",
+                        "effects": {
+                            "stats_change": {
+                                "smrod_level": 30,
+                                "morale": -5,
+                                "energia": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Do piwnicy. Może jakiś menel pomoże.",
+                        "nextScene": "piwnica_menel_spotkanie",
+                        "effects": {
+                            "stats_change": {
+                                "podejrzliwosc_psow": -10,
+                                "szacun_na_dzielni": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "piwnica_menel_spotkanie": {
+                "id": "piwnica_menel_spotkanie",
+                "description": "W piwnicy siedzi stary Heniek. 'O, Centuś! Co tam, znowu cię gonią? Mam flaszkę, poczęstuję.'",
+                "choices": [
+                    {
+                        "text": "Napić się z Heńkiem. Może opowie coś ciekawego.",
+                        "nextScene": "picie_z_henkiem",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 5,
+                                "morale": 10,
+                                "kac_power": 15,
+                                "stan_watraby": -10,
+                                "szacun_na_dzielni": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Odmówić i iść dalej. Trzeba być czujnym.",
+                        "nextScene": "dalsza_ucieczka",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -5,
+                                "morale": -5,
+                                "podejrzliwosc_psow": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "picie_z_henkiem": {
+                "id": "picie_z_henkiem",
+                "description": "Heniek opowiada o czasach, gdy był królem melin. Psy przeszły obok, nawet nie zaglądając do piwnicy. Jesteś bezpieczny, ale nieźle wstawiony.",
+                "choices": [
+                    {
+                        "text": "Iść do domu się przespać.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 20,
+                                "kac_power": 30,
+                                "morale": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zostać i słuchać dalej historii Heńka.",
+                        "nextScene": "historie_henka",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "stan_watraby": -15,
+                                "kac_power": 25
+                            }
+                        }
+                    }
+                ]
+            },
+            "dalsza_ucieczka": {
+                "id": "dalsza_ucieczka",
+                "description": "Wychodzisz z piwnicy i biegniesz dalej. Słyszysz szczekanie, ale jest coraz dalej. Chyba ci się udało.",
+                "choices": [
+                    {
+                        "text": "Wrócić do domu okrężną drogą.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "morale": 10,
+                                "podejrzliwosc_psow": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Iść do parku ochłonąć.",
+                        "nextScene": "odpoczynek_w_parku",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 5,
+                                "morale": 5,
+                                "podejrzliwosc_psow": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "historie_henka": {
+                "id": "historie_henka",
+                "description": "Heniek opowiada o wielkiej bijatyce w '95, gdy obronił honor całego Janowa przed Sebixami z Białej. Zasypiasz w połowie opowieści.",
+                "choices": [
+                    {
+                        "text": "...*chrap*...",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 30,
+                                "kac_power": 40,
+                                "szacun_na_dzielni": 15,
+                                "stan_watraby": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "odpoczynek_w_parku": {
+                "id": "odpoczynek_w_parku",
+                "description": "Siadasz na ławce. Adrenalina opada. Myślisz o tym, że może jednak nie powinieneś nawracać dzieciaków na wiarę w gówno.",
+                "choices": [
+                    {
+                        "text": "Masz rację, to był błąd. Wracasz do domu.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "energia": 10,
+                                "wiara_w_gowno": -10
+                            },
+                            "flags_set": {
+                                "apostol_smaku": false
+                            }
+                        }
+                    },
+                    {
+                        "text": "Nie! Kebab wybrał cię na proroka!",
+                        "nextScene": "dalsza_misja_nawracania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_na_dzielni": 10,
+                                "energia": 15,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "mountain_dew_boost_ucieczka": {
+                "id": "mountain_dew_boost_ucieczka",
+                "description": "Mountain Dew uderza jak młot! Czujesz się jak Usain Bolt na speedzie. Seba zostaje daleko w tyle.",
+                "choices": [
+                    {
+                        "text": "Biec dalej, póki działa boost!",
+                        "nextScene": "dalsza_ucieczka",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 15,
+                                "morale": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "zsz_ken_schronienie": {
+                "id": "zsz_ken_schronienie",
+                "description": "Wpadasz do szkoły. Woźna patrzy podejrzliwie, ale nie wydaje cię Sebie. Może jednak nie wszyscy cię nienawidzą?",
+                "choices": [
+                    {
+                        "text": "Iść na lekcje, skoro już tu jesteś.",
+                        "nextScene": "lekcja_w_kenie_nuda",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": 5,
+                                "energia": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "O! Jest jakiś konkurs! (Plakat na ścianie)",
+                        "nextScene": "konkurs_programowania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "energia": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "konsumpcja_starej_frytki": {
+                "id": "konsumpcja_starej_frytki",
+                "description": "Frytka smakuje jak guma do żucia z nutą pleśni. Ale przynajmniej coś zjadłeś.",
+                "choices": [
+                    {
+                        "text": "Iść szukać więcej 'skarbów'.",
+                        "nextScene": "szukanie_w_bluzach",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 2,
+                                "stan_watraby": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "zachowanie_znalezionego_hajsu": {
+                "id": "zachowanie_znalezionego_hajsu",
+                "description": "Dwa złote to zawsze dwa złote. Może się przydać na browara... kiedyś.",
+                "choices": [
+                    {
+                        "text": "Iść do matki po więcej.",
+                        "nextScene": "wizyta_u_matki_po_hajs",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "prosba_o_hajs_od_matki": {
+                "id": "prosba_o_hajs_od_matki",
+                "description": "Matka wzdycha ciężko. 'Masz tu piątaka i spierdalaj. I żebym cię więcej nie widziała!'",
+                "choices": [
+                    {
+                        "text": "Iść kupić browara.",
+                        "nextScene": "browar_za_pozyczke",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 5,
+                                "relacje_z_matka": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "sciema_z_pomoca_matce": {
+                "id": "sciema_z_pomoca_matce",
+                "description": "Matka każe ci wyrwać chwasty. Po godzinie masz dość, ale dała ci dychę.",
+                "choices": [
+                    {
+                        "text": "Iść świętować zarobek.",
+                        "nextScene": "browar_za_pozyczke",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": 10,
+                                "energia": -10,
+                                "relacje_z_matka": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "O! Julka idzie ulicą! (Może ją poderwę?)",
+                        "nextScene": "spotkanie_julki_z_liceum",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "energia": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "awantura_w_gardenie": {
+                "id": "awantura_w_gardenie",
+                "description": "Kierowca zatrzymuje Gardenę. 'Wypieprzaj, gnoju! Sam se idź do tej budy!'",
+                "choices": [
+                    {
+                        "text": "Iść pieszo. Przynajmniej oszczędzisz na bilecie.",
+                        "nextScene": "lekcja_w_kenie_nuda",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "morale": -5,
+                                "hajs_w_kieszeni": 3
+                            }
+                        }
+                    }
+                ]
+            },
+            "proby_kodzenia_wirusa": {
+                "id": "proby_kodzenia_wirusa",
+                "description": "Twój wirus wyświetla 'WALDEK TO KOZAK' na wszystkich komputerach. Nauczyciel jest pod wrażeniem twojej... kreatywności.",
+                "choices": [
+                    {
+                        "text": "Być dumnym z siebie.",
+                        "nextScene": "konkurs_programowania",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 10,
+                                "szacun_w_kenie": 5,
+                                "morale": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się gdy nauczyciel proponuje konkurs.",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -10,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "cs_pod_lawka": {
+                "id": "cs_pod_lawka",
+                "description": "Udało ci się zrobić clutcha 1vs3! Niestety nauczyciel zauważył i zabrał telefon.",
+                "choices": [
+                    {
+                        "text": "Trudno, i tak było warto.",
+                        "nextScene": "dojazdy_gardena_lekcja",
+                        "effects": {
+                            "stats_change": {
+                                "skill_cs": 5,
+                                "szacun_w_kenie": -10,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "spanie_na_lekcji": {
+                "id": "spanie_na_lekcji",
+                "description": "Śpisz jak zabity. Nauczyciel nawet nie próbuje cię budzić. I tak nic z ciebie nie będzie.",
+                "choices": [
+                    {
+                        "text": "*chrap* ... *chrap*",
+                        "nextScene": "dojazdy_gardena_lekcja",
+                        "effects": {
+                            "stats_change": {
+                                "energia": 15,
+                                "szacun_w_kenie": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "kolejny_browar_na_kreche": {
+                "id": "kolejny_browar_na_kreche",
+                "description": "Drugi browar smakuje jeszcze lepiej. Świat jest piękny. Zapomniałeś o szkole.",
+                "choices": [
+                    {
+                        "text": "Iść spać w krzakach.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "stan_watraby": -10,
+                                "kac_power": 20,
+                                "szacun_w_kenie": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "dyskusja_z_bagietami_o_gownie": {
+                "id": "dyskusja_z_bagietami_o_gownie",
+                "description": "Policjanci słuchają twojej historii o Złotym Kebabie z niedowierzaniem. Jeden nawet się śmieje.",
+                "choices": [
+                    {
+                        "text": "Wykorzystać moment i spierdolić!",
+                        "nextScene": "ucieczka_przed_psami_misja",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "podejrzliwosc_psow": 15
+                            }
+                        }
+                    }
+                ]
+            },
+            "ukrycie_w_kontenerze": {
+                "id": "ukrycie_w_kontenerze",
+                "description": "Siedzisz w śmieciach. Śmierdzi jak w domu. Psy przebiegają obok, nie zwracając uwagi.",
+                "choices": [
+                    {
+                        "text": "Wyjść i otrzepać się (trochę).",
+                        "nextScene": "odpoczynek_w_parku",
+                        "effects": {
+                            "stats_change": {
+                                "smrod_level": 20,
+                                "podejrzliwosc_psow": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "obietnica_poprawy_matce": {
+                "id": "obietnica_poprawy_matce",
+                "description": "Matka patrzy z nadzieją. 'Może tym razem mówisz prawdę, synu?' Oboje wiecie, że nie.",
+                "choices": [
+                    {
+                        "text": "Iść do szkoły, żeby nie było gadania.",
+                        "nextScene": "dojazdy_gardena_lekcja",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": 5,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "performance_dla_matki": {
+                "id": "performance_dla_matki",
+                "description": "'PERFORMANCE?! A może byś tak PERFORMANCE w robocie odstawił?!' Matka jest wkurzona jak nigdy.",
+                "choices": [
+                    {
+                        "text": "Uciec do swojej meliny.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -15,
+                                "szacun_w_kenie": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "splata_dlugu_sebie_od_razu": {
+                "id": "splata_dlugu_sebie_od_razu",
+                "description": "Seba jest w szoku. 'Centuś, ty jednak nie jesteś takim chujem!' Czujesz się... dziwnie.",
+                "choices": [
+                    {
+                        "text": "Iść świętować browarem tę dziwną chwilę.",
+                        "nextScene": "browar_za_pozyczke",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "morale": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "obietnica_splaty_dla_seby": {
+                "id": "obietnica_splaty_dla_seby",
+                "description": "Seba kiwa głową. 'Za tydzień ma być hajs, Centuś. Inaczej nogi z dupy powyrywa.'",
+                "choices": [
+                    {
+                        "text": "Spierdolić, póki można.",
+                        "nextScene": "ucieczka_przed_seba",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -5,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "szukanie_wyznawcow": {
+                "id": "szukanie_wyznawcow",
+                "description": "Chodzisz po mieście i opowiadasz o Złotym Kebabie. Ludzie patrzą jak na wariata. Może to i lepiej?",
+                "choices": [
+                    {
+                        "text": "Znaleźć jakiegoś dzieciaka do nawrócenia.",
+                        "nextScene": "nawracanie_dzieciaka",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -5,
+                                "morale": 5,
+                                "wiara_w_gowno": 3
+                            }
+                        }
+                    },
+                    {
+                        "text": "Spróbować nawrócić meneli. Oni wszystko zjedzą.",
+                        "nextScene": "nawracanie_meneli",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 2,
+                                "morale": 3,
+                                "wiara_w_gowno": 5,
+                                "stan_watraby": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "dalsza_misja_nawracania": {
+                "id": "dalsza_misja_nawracania",
+                "description": "Czujesz przypływ energii! Złoty Kebab wybrał CIEBIE! Czas szerzyć Dobrą Nowinę o Gównie!",
+                "choices": [
+                    {
+                        "text": "Iść nawracać kolejne dzieciaki!",
+                        "nextScene": "nawracanie_dzieciaka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 20,
+                                "energia": 15,
+                                "szacun_na_dzielni": -10,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Założyć bloga o cudownych właściwościach gówna.",
+                        "nextScene": "blog_o_gownie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "skill_programowania": 5,
+                                "szacun_w_kenie": -5,
+                                "wiara_w_gowno": 15
+                            }
+                        }
+                    }
+                ]
+            },
+            "spotkanie_julki_z_liceum": {
+                "id": "spotkanie_julki_z_liceum",
+                "description": "Na przystanku widzisz Julkę z liceum. Kurwa, ale wypiękniała! Patrzy w twoją stronę i się uśmiecha.",
+                "choices": [
+                    {
+                        "text": "Podejść z tekstem 'Siema mała, zajebisty sweterek!' (ochota level 100)",
+                        "nextScene": "proba_podrywu_julki",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Spierdalać zawstydzonym, potykając się o własne nogi.",
+                        "nextScene": "ucieczka_przed_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "proba_podrywu_julki": {
+                "id": "proba_podrywu_julki",
+                "description": "'Waldek? To ty? Myślałam że siedzisz...' Julka patrzy z mieszaniną obrzydzenia i zaciekawienia.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się! 'Co kurwa, za dobry jestem dla ciebie?!'",
+                        "nextScene": "awantura_z_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "szacun_na_dzielni": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się. 'Nikt mnie nie rozumie...'",
+                        "nextScene": "placz_przed_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_w_kenie": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zaproponować jej Mountain Dew (sexy ruch).",
+                        "nextScene": "mountain_dew_dla_julki",
+                        "condition": {
+                            "inventory_contains": "polowa_mountain_dew"
+                        },
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_na_dzielni": 5
+                            },
+                            "inventory_remove": [
+                                {
+                                    "item_id": "polowa_mountain_dew"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "konkurs_programowania": {
+                "id": "konkurs_programowania",
+                "description": "W KENie konkurs programowania. Główna nagroda: Skrzynka Mountain Dew i 100 zł. Twój kod to syf, ale może się uda?",
+                "choices": [
+                    {
+                        "text": "Wkurwić się i rozjebać klawiaturę!",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": -10,
+                                "szacun_w_kenie": -30,
+                                "morale": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Ściągać od kujona, ale dyskretnie (zajarany możliwością wygranej).",
+                        "nextScene": "sciaganie_na_konkursie",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 5,
+                                "szacun_w_kenie": -10
+                            },
+                            "flags_set": {
+                                "nakryty_na_sciaganiu": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "demolka_pracowni": {
+                "id": "demolka_pracowni",
+                "description": "Klawiatura rozpierdolona, monitor przewrócony. Nauczyciel patrzy z przerażeniem. Dyro już dzwoni po ochronę.",
+                "choices": [
+                    {
+                        "text": "Płakać i błagać o wybaczenie.",
+                        "nextScene": "blaganie_dyra",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -20,
+                                "morale": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wypierdolić z kopa kosz na śmieci i uciekać!",
+                        "nextScene": "ucieczka_z_kena",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -20,
+                                "szacun_na_dzielni": 15
+                            }
+                        }
+                    }
+                ]
+            },
+            "sciaganie_na_konkursie": {
+                "id": "sciaganie_na_konkursie",
+                "description": "Kujon zauważył, że ściągasz. 'Ej, Centuś, może się dogadamy? Podzielimy nagrodę...'",
+                "choices": [
+                    {
+                        "text": "Zajarać się pomysłem współpracy!",
+                        "nextScene": "wspolpraca_z_kujonem",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 15,
+                                "hajs_w_kieszeni": 50
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się i zagrozić wpierdolem po szkole!",
+                        "nextScene": "grozby_dla_kujona",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -10,
+                                "szacun_w_kenie": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "spotkanie_dresow": {
+                "id": "spotkanie_dresow",
+                "description": "Pod sklepem trzech dresów liczy resztę z browara. Jeden to twój dawny kumpel z podstawówki.",
+                "choices": [
+                    {
+                        "text": "Zajarać się ze szczęścia! 'Siema Mati! Co tam?!'",
+                        "nextScene": "witanie_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "morale": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Spierdalać w podskokach zanim cię zauważą!",
+                        "nextScene": "ucieczka_przed_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "witanie_z_dresami": {
+                "id": "witanie_z_dresami",
+                "description": "'O, Centuś! Ty żyjesz?' Dresy się śmieją. 'Mamy browara, ale brakuje nam złotówki...'",
+                "choices": [
+                    {
+                        "text": "Dać im dwa złote znalezione w bluzie (żal się zrobiło).",
+                        "nextScene": "picie_z_dresami",
+                        "condition": {
+                            "stats_greater_equal": {
+                                "hajs_w_kieszeni": 2
+                            }
+                        },
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -2,
+                                "szacun_na_dzielni": 15,
+                                "stan_watraby": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się! 'Nie macie to wypierdalać!'",
+                        "nextScene": "konfrontacja_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "energia": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "picie_z_dresami": {
+                "id": "picie_z_dresami",
+                "description": "Dresy doceniły gest. Opowiadają o starych czasach i planach napadu na Żabkę.",
+                "choices": [
+                    {
+                        "text": "Zajarać się pomysłem! 'Wchodzę w to!'",
+                        "nextScene": "planowanie_napadu",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 20,
+                                "morale": 10,
+                                "podejrzliwosc_psow": 15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się i wyznać, że się boisz.",
+                        "nextScene": "wyznanie_dresom",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -30,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "planowanie_napadu": {
+                "id": "planowanie_napadu",
+                "description": "Plan jest prosty: Ty odwracasz uwagę kasjerki, oni kradną Żubry. Co może pójść nie tak?",
+                "choices": [
+                    {
+                        "text": "Spierdalać w ostatniej chwili! Jednak się zesrałeś!",
+                        "nextScene": "ucieczka_przed_napadem",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -25,
+                                "morale": -15,
+                                "podejrzliwosc_psow": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zajarać się i wejść do Żabki z tekstem o promocji!",
+                        "nextScene": "napad_na_zabke",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 25,
+                                "podejrzliwosc_psow": 30,
+                                "energia": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "napad_na_zabke": {
+                "id": "napad_na_zabke",
+                "description": "Kasjerka to Julka z liceum! 'Waldek?! Co ty... AAAA, ZŁODZIEJE!' Dresy w popłochu upuszczają piwo.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się na niekompetencję dresów!",
+                        "nextScene": "wkurw_na_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -10,
+                                "morale": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać i błagać Julkę o wybaczenie!",
+                        "nextScene": "blaganie_julki",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -15,
+                                "morale": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wykorzystać okazję i spróbować poderwać Julkę!",
+                        "nextScene": "podryw_w_zabce",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 5,
+                                "morale": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_julka": {
+                "id": "ucieczka_przed_julka",
+                "description": "Potykasz się o własne nogi i wpadasz na śmietnik. Julka się śmieje. Chcesz zapaść się pod ziemię.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się i wykrzyczeć 'ŚMIEJ SIĘ KURWA, ŚMIEJ!'",
+                        "nextScene": "awantura_przy_smietniku",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się i uciec do domu.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "mountain_dew_dla_julki": {
+                "id": "mountain_dew_dla_julki",
+                "description": "'Mountain Dew? Serio?' Julka patrzy na puszkę jak na kosmiczne znalezisko. 'No dobra, może łyk...'",
+                "choices": [
+                    {
+                        "text": "Zajarać się! 'Widzisz? Mam klasę!' (sexy uśmiech)",
+                        "nextScene": "podryw_na_mountain_dew",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_na_dzielni": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się gdy wypluwa! 'CO TY KURWA ROBISZ?!'",
+                        "nextScene": "awantura_o_mountain_dew",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "podryw_na_mountain_dew": {
+                "id": "podryw_na_mountain_dew",
+                "description": "Julka się uśmiecha. 'Wiesz co? Jesteś dziwny, ale... może wyskoczymy na kebsa?'",
+                "choices": [
+                    {
+                        "text": "ZAJARAĆ SIĘ MAKSYMALNIE! 'JASNE MAŁA!'",
+                        "nextScene": "randka_z_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 30,
+                                "szacun_na_dzielni": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się ze szczęścia...",
+                        "nextScene": "placz_szczescia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "wspolpraca_z_kujonem": {
+                "id": "wspolpraca_z_kujonem",
+                "description": "Kujon ogarnia kod, ty odwracasz uwagę nauczyciela robiąc z siebie debila. Klasyka.",
+                "choices": [
+                    {
+                        "text": "Zajarać się gdy wygrywacie konkurs!",
+                        "nextScene": "wygrana_konkursu",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 20,
+                                "hajs_w_kieszeni": 50,
+                                "morale": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się gdy kujon chce większą część hajsu!",
+                        "nextScene": "klotnia_o_hajs",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -10,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "wygrana_konkursu": {
+                "id": "wygrana_konkursu",
+                "description": "Wygraliście! Mountain Dew się leje strumieniami! Kujon płacze ze szczęścia, a ty...",
+                "choices": [
+                    {
+                        "text": "Zajarany robisz zwycięski taniec na stole!",
+                        "nextScene": "taniec_na_stole",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": 15,
+                                "morale": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwiasz się na zdjęcia telefonami! 'WYPIERDALAM!'",
+                        "nextScene": "ucieczka_z_konkursu",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -10,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "konfrontacja_z_dresami": {
+                "id": "konfrontacja_z_dresami",
+                "description": "Dresy otaczają cię z groźnymi minami. 'Centuś, ty się czasem nie przeceniasz?'",
+                "choices": [
+                    {
+                        "text": "Rozpłakać się i błagać o litość!",
+                        "nextScene": "blaganie_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -30,
+                                "morale": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się jeszcze bardziej! 'DAWAĆ KURWA, WSZYSTKICH WAS ZAJEBIĘ!'",
+                        "nextScene": "proba_walki_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -30,
+                                "morale": -15,
+                                "stan_watraby": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "wyznanie_dresom": {
+                "id": "wyznanie_dresom",
+                "description": "Dresy patrzą ze zdziwieniem jak płaczesz. 'Kurwa Centuś, nie bądź baba...'",
+                "choices": [
+                    {
+                        "text": "Wkurwić się! 'SAMA JESTEŚ BABA!'",
+                        "nextScene": "proba_walki_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "energia": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać jeszcze bardziej! 'Nikt mnie nie rozumie!'",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -25,
+                                "morale": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "podryw_w_zabce": {
+                "id": "podryw_w_zabce",
+                "description": "'Julka, ja... zawsze cię kochałem!' Dresy za oknem robią facepalmy.",
+                "choices": [
+                    {
+                        "text": "Zajarać się i kontynuować podryw! 'Będziesz moją królową!'",
+                        "nextScene": "romantyczny_podryw",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się gdy dzwoni po policję! 'NIEWDZIĘCZNA KURWA!'",
+                        "nextScene": "ucieczka_z_zabki",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    }
+                ]
+            },
+            "romantyczny_podryw": {
+                "id": "romantyczny_podryw",
+                "description": "'Waldek, jesteś... wyjątkowy.' Julka wygląda na zdezorientowaną. 'Ale wzywam policję.'",
+                "choices": [
+                    {
+                        "text": "Zajarać się! 'To znaczy że mnie lubisz!'",
+                        "nextScene": "przyjazd_policji",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "podejrzliwosc_psow": 25
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać! 'Znowu złamałaś mi serce!'",
+                        "nextScene": "ucieczka_z_zabki",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "randka_z_julka": {
+                "id": "randka_z_julka",
+                "description": "Siedzicie w kebsie. Julka opowiada o studiach. Chyba naprawdę jej się podobasz!",
+                "choices": [
+                    {
+                        "text": "Zajarać się i zaproponować ślub! (TERAZ ALBO NIGDY!)",
+                        "nextScene": "oswiadczyny_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 20,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się gdy wspomina o swoim chłopaku!",
+                        "nextScene": "awantura_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "oswiadczyny_w_kebsie": {
+                "id": "oswiadczyny_w_kebsie",
+                "description": "'Waldek, my się znamy od godziny...' Julka patrzy na ciebie jak na wariata.",
+                "choices": [
+                    {
+                        "text": "Płakać i błagać! 'Ale to PRZEZNACZENIE!'",
+                        "nextScene": "placz_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "szacun_na_dzielni": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się! 'NIEWDZIĘCZNA SUKA!'",
+                        "nextScene": "awantura_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -25,
+                                "szacun_na_dzielni": -30
+                            }
+                        }
+                    }
+                ]
+            },
+            "awantura_z_julka": {
+                "id": "awantura_z_julka",
+                "description": "'SAMA JESTEŚ W PIERDLU!' Julka ucieka z płaczem. Ludzie patrzą jak na debila.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się jeszcze bardziej! 'PATRZCIE SE!'",
+                        "nextScene": "dalsza_awantura",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "morale": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się i uciec do domu.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "placz_przed_julka": {
+                "id": "placz_przed_julka",
+                "description": "Łzy ci lecą. Julka patrzy ze współczuciem. 'Waldek... może idź do psychiatry?'",
+                "choices": [
+                    {
+                        "text": "Wkurwić się! 'SAMA IDŹ!'",
+                        "nextScene": "awantura_z_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać jeszcze bardziej...",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "awantura_o_mountain_dew": {
+                "id": "awantura_o_mountain_dew",
+                "description": "Julka wypluwa Mountain Dew. 'Fuj! To smakuje jak płyn do chłodnicy!'",
+                "choices": [
+                    {
+                        "text": "Wkurwić się jeszcze bardziej! 'ZNAWCZYNI CHUJA!'",
+                        "nextScene": "awantura_z_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się. 'To był ostatni łyk...'",
+                        "nextScene": "placz_przed_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "placz_szczescia": {
+                "id": "placz_szczescia",
+                "description": "Płaczesz ze szczęścia. Julka patrzy z politowaniem. 'No dobra, chodź na tego kebsa.'",
+                "choices": [
+                    {
+                        "text": "Iść szczęśliwy jak dziecko!",
+                        "nextScene": "randka_z_julka",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "klotnia_o_hajs": {
+                "id": "klotnia_o_hajs",
+                "description": "'Ja zrobiłem całą robotę!' - krzyczy kujon. 'Bez ciebie bym wygrał więcej!'",
+                "choices": [
+                    {
+                        "text": "Wkurwić się i rozjebać jego laptop!",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -30,
+                                "morale": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się. 'Myślałem, że jesteśmy ziomkami...'",
+                        "nextScene": "placz_w_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -10,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "taniec_na_stole": {
+                "id": "taniec_na_stole",
+                "description": "Tańczysz jak pojebany! Wszyscy nagrywają! Jutro będziesz gwiazdą YouTube!",
+                "choices": [
+                    {
+                        "text": "JESZCZE BARDZIEJ SIĘ JARAĆ! 'DAWAJ LAJWY!'",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": 20,
+                                "morale": 25
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się na filmowanie! 'USUWAĆ TO!'",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -20,
+                                "morale": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_z_konkursu": {
+                "id": "ucieczka_z_konkursu",
+                "description": "Wybiegasz wkurwiony! Za tobą lecą puszki Mountain Dew! 'Waldek, wróć!'",
+                "choices": [
+                    {
+                        "text": "Wrócić i przeprosić (ze łzami w oczach).",
+                        "nextScene": "wygrana_konkursu",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": 5,
+                                "morale": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "ROZPIERDOLIĆ WSZYSTKO PO DRODZE!",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -30,
+                                "morale": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "blaganie_dresow": {
+                "id": "blaganie_dresow",
+                "description": "'Nie bijcie! Mam w domu Mountain Dew!' Dresy patrzą ze zdziwieniem.",
+                "choices": [
+                    {
+                        "text": "Zaproponować wspólne picie (może się zajarają?).",
+                        "nextScene": "picie_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 5,
+                                "morale": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Uciekać póki są zdezorientowani!",
+                        "nextScene": "ucieczka_przed_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "energia": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "proba_walki_z_dresami": {
+                "id": "proba_walki_z_dresami",
+                "description": "Dostajesz wpierdol... ale przynajmniej z honorem! Dresy są pod wrażeniem odwagi.",
+                "choices": [
+                    {
+                        "text": "Dołączyć do ekipy (z podbitym okiem).",
+                        "nextScene": "picie_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 20,
+                                "energia": -20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Uciekać do domu z płaczem.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -10,
+                                "morale": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_dresami": {
+                "id": "ucieczka_przed_dresami",
+                "description": "Biegniesz jak pojebany! Za tobą lecą przekleństwa i puszki po piwie.",
+                "choices": [
+                    {
+                        "text": "Schować się w KENie!",
+                        "nextScene": "zsz_ken_schronienie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Uciekać do domu!",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "wkurw_na_dresow": {
+                "id": "wkurw_na_dresow",
+                "description": "'KURWA MAC! NAWET NAPADU NIE UMIECIE ZROBIĆ!' Dresy patrzą groźnie.",
+                "choices": [
+                    {
+                        "text": "Spierdalać przed wpierdolem!",
+                        "nextScene": "ucieczka_przed_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "energia": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Przyjąć wpierdol jak facet!",
+                        "nextScene": "proba_walki_z_dresami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "energia": -25
+                            }
+                        }
+                    }
+                ]
+            },
+            "blaganie_julki": {
+                "id": "blaganie_julki",
+                "description": "'Julka, przepraszam! To przez tą sekę gównojadów!' Julka patrzy jak na wariata.",
+                "choices": [
+                    {
+                        "text": "Spróbować jeszcze raz ją poderwać!",
+                        "nextScene": "podryw_w_zabce",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "szacun_na_dzielni": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Uciekać zanim zadzwoni po policję!",
+                        "nextScene": "ucieczka_z_zabki",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "podejrzliwosc_psow": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_z_zabki": {
+                "id": "ucieczka_z_zabki",
+                "description": "Wybiegasz ze sklepu! Za tobą słychać syreny! Kurwa, znowu to samo!",
+                "choices": [
+                    {
+                        "text": "Do piwnicy! Tam jest bezpiecznie!",
+                        "nextScene": "piwnica_menel_spotkanie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "podejrzliwosc_psow": 15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Do kontenera na śmieci!",
+                        "nextScene": "ukrycie_w_kontenerze",
+                        "effects": {
+                            "stats_change": {
+                                "smrod_level": 20,
+                                "podejrzliwosc_psow": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "placz_w_kebsie": {
+                "id": "placz_w_kebsie",
+                "description": "Ryczysz jak bóbr, kebab się rozpada. Julka po cichu wychodzi.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się i rozpierdolić kebaba!",
+                        "nextScene": "awantura_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "morale": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wrócić do domu w depresji.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -25,
+                                "energia": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "awantura_w_kebsie": {
+                "id": "awantura_w_kebsie",
+                "description": "Kebab rozjebany, Julka ucieka, właściciel dzwoni po policję.",
+                "choices": [
+                    {
+                        "text": "Spierdalać przed psami!",
+                        "nextScene": "ucieczka_przed_psami_misja",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać i przepraszać właściciela.",
+                        "nextScene": "placz_w_kebsie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -15,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "grozby_dla_kujona": {
+                "id": "grozby_dla_kujona",
+                "description": "Kujon drży ze strachu. 'Dobra, dobra! Pomogę ci, tylko nie bij!' Nauczyciel patrzy podejrzliwie.",
+                "choices": [
+                    {
+                        "text": "Współpracować z kujonem (może jednak się dogadamy).",
+                        "nextScene": "wspolpraca_z_kujonem",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -5,
+                                "skill_programowania": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się jeszcze bardziej! 'PISZ TEN KOD!'",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -20,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "blaganie_dyra": {
+                "id": "blaganie_dyra",
+                "description": "'Panie dyrektorze, ja przepraszam! To przez stres!' Dyro patrzy z politowaniem.",
+                "choices": [
+                    {
+                        "text": "Płakać dalej i obiecać poprawę.",
+                        "nextScene": "konkurs_programowania",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -10,
+                                "morale": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się na litość! 'WYPIERDALAJ!'",
+                        "nextScene": "ucieczka_z_kena",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_w_kenie": -30,
+                                "morale": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_z_kena": {
+                "id": "ucieczka_z_kena",
+                "description": "Wybiegasz z KENa jak pojebany! Za tobą krzyki ochroniarza! Gdzie teraz?",
+                "choices": [
+                    {
+                        "text": "Do dresów! Oni mnie ochronią!",
+                        "nextScene": "spotkanie_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "szacun_na_dzielni": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Do domu! Przeczekać aferę!",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -20,
+                                "morale": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "awantura_przy_smietniku": {
+                "id": "awantura_przy_smietniku",
+                "description": "Drąc się przy śmietniku, przyciągasz uwagę wszystkich. Julka ucieka zawstydzona.",
+                "choices": [
+                    {
+                        "text": "Wkurwić się jeszcze bardziej i kopnąć śmietnik!",
+                        "nextScene": "spotkanie_dresow",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -10,
+                                "morale": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Rozpłakać się i uciec do domu.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "przyjazd_policji": {
+                "id": "przyjazd_policji",
+                "description": "Policja przyjeżdża. Julka patrzy na ciebie ze współczuciem. 'Przepraszam, Waldek, ale musiałam...'",
+                "choices": [
+                    {
+                        "text": "Spierdalać przed psami!",
+                        "nextScene": "ucieczka_przed_psami_misja",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać i błagać Julkę o pomoc!",
+                        "nextScene": "blaganie_julki",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_napadem": {
+                "id": "ucieczka_przed_napadem",
+                "description": "Uciekasz w ostatniej chwili! Za tobą lecą przekleństwa dresów: 'CENTUŚ TY CHUJU! MIAŁEŚ BYĆ ZIOMEM!'",
+                "choices": [
+                    {
+                        "text": "Spierdalać do domu!",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -20,
+                                "energia": -15,
+                                "morale": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Schować się w KENie!",
+                        "nextScene": "zsz_ken_schronienie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "szacun_na_dzielni": -15,
+                                "szacun_w_kenie": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "dalsza_awantura": {
+                "id": "dalsza_awantura",
+                "description": "Drąc się na całą ulicę, przyciągasz uwagę wszystkich. Ktoś woła policję.",
+                "choices": [
+                    {
+                        "text": "Spierdalać przed psami!",
+                        "nextScene": "ucieczka_przed_psami_misja",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "podejrzliwosc_psow": 20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Płakać i przepraszać przechodniów.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -20,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "placz_w_pracowni": {
+                "id": "placz_w_pracowni",
+                "description": "Płaczesz jak bóbr. Kujon czuje się winny. 'Dobra, Centuś, podzielimy się po równo...'",
+                "choices": [
+                    {
+                        "text": "Zajarać się! 'Jesteś prawdziwym ziomem!'",
+                        "nextScene": "wygrana_konkursu",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "szacun_w_kenie": 5,
+                                "skill_programowania": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Wkurwić się! 'Za późno! ROZPIERDOL!'",
+                        "nextScene": "demolka_pracowni",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "szacun_w_kenie": -20,
+                                "energia": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "tworzenie_ulotek_o_gownie": {
+                "id": "tworzenie_ulotek_o_gownie",
+                "description": "Używasz skilla z SEPTEM i Paint'a. Ulotka 'GÓWNO-CUD: Zjedz i Bądź Zdrów!' wygląda... chujowo, ale z przekazem.",
+                "choices": [
+                    {
+                        "text": "Rozdawać na mieście. Ludzie muszą poznać prawdę!",
+                        "nextScene": "rozdawanie_ulotek_na_miescie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "szacun_na_dzielni": -3,
+                                "smrod_level": 5,
+                                "wiara_w_gowno": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Najpierw samemu przetestować 'kurację'. Więcej gówna!",
+                        "nextScene": "test_kuracji_gownianej",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "energia": -10,
+                                "kac_power": 10,
+                                "stan_watraby": -10,
+                                "smrod_level": 15,
+                                "wiara_w_gowno": 10
+                            },
+                            "flags_set": {
+                                "zjadl_gowno": true,
+                                "probowal_gotowac_gowno": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "medycyna_alternatywna_dla_matki": {
+                "id": "medycyna_alternatywna_dla_matki",
+                "description": "Matka słucha o 'leczniczym gównie'. Robi się czerwona. 'CHYBA CIĘ POPIERDOLIŁO DO RESZTY, SYNU!' Zaczyna szukać paska.",
+                "choices": [
+                    {
+                        "text": "Spierdalać, zanim użyje na tobie 'paskoterapii'!",
+                        "nextScene": "ucieczka_od_matki_z_paskiem",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -10,
+                                "energia": -10,
+                                "morale": -15,
+                                "wiara_w_gowno": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Próbować dalej tłumaczyć, że to naukowe.",
+                        "nextScene": "naukowe_tlumaczenia_o_gownie_matce",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -20,
+                                "morale": -10,
+                                "szacun_w_kenie": -5,
+                                "wiara_w_gowno": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "propozycja_diety_gownianej_matce": {
+                "id": "propozycja_diety_gownianej_matce",
+                "description": "'Dieta GÓWNIANA?!' Matka wygląda, jakby miała cię zaraz zamordować chochlą. 'WYNOŚ MI SIĘ Z DOMU, DEGENERACIE!'",
+                "choices": [
+                    {
+                        "text": "Uciekać, póki żyjesz.",
+                        "nextScene": "ucieczka_od_matki_z_paskiem",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -25,
+                                "energia": -5,
+                                "morale": -20,
+                                "szacun_na_dzielni": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Z płaczem błagać o zrozumienie.",
+                        "nextScene": "placz_przed_matka_o_gowno",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -15,
+                                "morale": -25,
+                                "wiara_w_gowno": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "rozdawanie_ulotek_na_miescie": {
+                "id": "rozdawanie_ulotek_na_miescie",
+                "description": "Rozdajesz ulotki. Większość ludzi omija cię szerokim łukiem. Jakiś ksiądz bierze jedną z zaciekawieniem.",
+                "choices": [
+                    {
+                        "text": "Zagadać do księdza. Może go nawrócisz?",
+                        "nextScene": "rozmowa_z_ksiedzem_o_gownie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 5,
+                                "wiara_w_gowno": 5,
+                                "szacun_na_dzielni": -2
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zignorować księdza. Klechy to zło.",
+                        "nextScene": "kontynuacja_rozdawania_ulotek",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -2,
+                                "energia": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "test_kuracji_gownianej": {
+                "id": "test_kuracji_gownianej",
+                "description": "Połykasz kolejną porcję. Tym razem 'selekcjonowane'. Wizja Złotego Kebaba staje się wyraźniejsza. Jesteś na dobrej drodze, by stać się bogiem gówna.",
+                "choices": [
+                    {
+                        "text": "Podzielić się odkryciem z Sebą. On zrozumie.",
+                        "nextScene": "dzielenie_sie_gownem_z_seba",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "szacun_na_dzielni": 5,
+                                "wiara_w_gowno": 10,
+                                "stan_watraby": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Pora na podbój świata! Zacznij od Janowa!",
+                        "nextScene": "dalsza_misja_nawracania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 15,
+                                "wiara_w_gowno": 15,
+                                "energia": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_od_matki_z_paskiem": {
+                "id": "ucieczka_od_matki_z_paskiem",
+                "description": "Ledwo uciekasz przed matczynym gniewem i jej legendarnym paskiem 'Dysycyplinator 3000'. Świat cię nie rozumie.",
+                "choices": [
+                    {
+                        "text": "Pójść się najebać do Heńka w piwnicy.",
+                        "nextScene": "piwnica_menel_spotkanie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "energia": -5,
+                                "kac_power": 10,
+                                "stan_watraby": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Schować się w KENie i grać w CSa.",
+                        "nextScene": "zsz_ken_schronienie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "energia": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "naukowe_tlumaczenia_o_gownie_matce": {
+                "id": "naukowe_tlumaczenia_o_gownie_matce",
+                "description": "Twoje 'naukowe' argumenty o mikroflorze i energii z odchodów tylko pogarszają sprawę. Matka dzwoni po egzorcystę.",
+                "choices": [
+                    {
+                        "text": "Spierdalać, zanim przyjedzie z krzyżem!",
+                        "nextScene": "ucieczka_przed_egzorcysta",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -25,
+                                "energia": -10,
+                                "morale": -20,
+                                "podejrzliwosc_psow": 10,
+                                "wiara_w_gowno": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "placz_przed_matka_o_gowno": {
+                "id": "placz_przed_matka_o_gowno",
+                "description": "Płaczesz, że tylko chciałeś jej pomóc schudnąć na lato dietą gównianą. Matka wyrzuca cię za drzwi i zmienia zamki.",
+                "choices": [
+                    {
+                        "text": "Trudno, misja jest ważniejsza niż rodzina.",
+                        "nextScene": "poczatek_sekty_gownojadow",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -50,
+                                "morale": 5,
+                                "szacun_na_dzielni": -15,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Może jednak to był głupi pomysł...",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "relacje_z_matka": -20,
+                                "morale": -30,
+                                "wiara_w_gowno": -20
+                            },
+                            "flags_set": {
+                                "apostol_smaku": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "rozmowa_z_ksiedzem_o_gownie": {
+                "id": "rozmowa_z_ksiedzem_o_gownie",
+                "description": "Ksiądz proboszcz czyta ulotkę. 'Synu, czy to jakaś nowa herezja? Gówno jako droga do zbawienia?' Wygląda na zaintrygowanego.",
+                "choices": [
+                    {
+                        "text": "Przekonywać go o boskości Złotego Kebaba.",
+                        "nextScene": "nawracanie_ksiedza",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "wiara_w_gowno": 15,
+                                "szacun_na_dzielni": -5,
+                                "podejrzliwosc_psow": 5
+                            },
+                            "flags_set": {
+                                "ksiadz_zna_herezje": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Powiedzieć, że to tylko żart. Ulotki dla beki.",
+                        "nextScene": "kontynuacja_rozdawania_ulotek",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "szacun_na_dzielni": 2,
+                                "wiara_w_gowno": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "kontynuacja_rozdawania_ulotek": {
+                "id": "kontynuacja_rozdawania_ulotek",
+                "description": "Rozdajesz dalej. Jakaś babcia wzięła ulotkę, mówiąc, że 'na kompost dobre'. Nagle podjeżdża biały bus. SANEPID.",
+                "choices": [
+                    {
+                        "text": "Spierdalać przed Sanepidem!",
+                        "nextScene": "ucieczka_przed_sanepidem",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "morale": -10,
+                                "szacun_na_dzielni": -10,
+                                "podejrzliwosc_psow": 10
+                            },
+                            "flags_set": {
+                                "sanepid_ostrzega": true
+                            }
+                        }
+                    },
+                    {
+                        "text": "Porozmawiać z nimi. Może chcą dołączyć?",
+                        "nextScene": "rozmowa_z_sanepidem_o_gownie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "hajs_w_kieszeni": -50,
+                                "szacun_na_dzielni": -15,
+                                "stan_watraby": -2
+                            },
+                            "flags_set": {
+                                "sanepid_ostrzega": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "dzielenie_sie_gownem_z_seba": {
+                "id": "dzielenie_sie_gownem_z_seba",
+                "description": "Seba patrzy na twoje 'delikatesy'. 'Centuś, tyś do reszty ochujał. Ale... jak dobre, to może spróbuję.'",
+                "choices": [
+                    {
+                        "text": "Poczęstować Sebę 'najlepszym kąskiem'.",
+                        "nextScene": "seba_probuje_gowno",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 10,
+                                "morale": 5,
+                                "wiara_w_gowno": 5,
+                                "smrod_level": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Nie, Seba nie jest godzien tej ambrozji.",
+                        "nextScene": "dalsza_misja_nawracania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -2,
+                                "wiara_w_gowno": 2
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_egzorcysta": {
+                "id": "ucieczka_przed_egzorcysta",
+                "description": "Widzisz jak ksiądz z kropidłem i ministrantami biegnie w stronę twojej chaty. 'W IMIĘ OJCA I SYNA, WYJDŹ DEMONIE GÓWNA!' Spierdalasz gdzie pieprz rośnie.",
+                "choices": [
+                    {
+                        "text": "Do piwnicy Heńka! On mnie zrozumie!",
+                        "nextScene": "piwnica_menel_spotkanie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "morale": -15,
+                                "szacun_na_dzielni": 5,
+                                "wiara_w_gowno": 5
+                            }
+                        }
+                    }
+                ]
+            },
+            "nawracanie_ksiedza": {
+                "id": "nawracanie_ksiedza",
+                "description": "Ksiądz słucha z uwagą. 'Ciekawe, ciekawe... Może to znak od Boga? Nowa droga do uświęcenia przez... upodlenie? Trzeba to przemyśleć.'",
+                "choices": [
+                    {
+                        "text": "Zostawić go z tą myślą. Ziarno zasiane.",
+                        "nextScene": "kontynuacja_rozdawania_ulotek",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Zaproponować wspólną 'modlitwę' nad świeżą porcją.",
+                        "nextScene": "wspolna_modlitwa_gowniana_z_ksiedzem",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -5,
+                                "wiara_w_gowno": 20,
+                                "szacun_na_dzielni": -10,
+                                "smrod_level": 10,
+                                "stan_watraby": -5
+                            },
+                            "flags_set": {
+                                "ksiadz_zna_herezje": true,
+                                "zjadl_gowno": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "ucieczka_przed_sanepidem": {
+                "id": "ucieczka_przed_sanepidem",
+                "description": "Biegniesz, a za tobą ludzie w białych kombinezonach. 'STÓJ! W IMIENIU HIGIENY PUBLICZNEJ!' Gubisz ich w bocznych uliczkach.",
+                "choices": [
+                    {
+                        "text": "Ukryć się w KENie. Tam mnie nie znajdą.",
+                        "nextScene": "zsz_ken_schronienie",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "rozmowa_z_sanepidem_o_gownie": {
+                "id": "rozmowa_z_sanepidem_o_gownie",
+                "description": "Panie z Sanepidu są w szoku. Grożą ci karą za 'szerzenie zagrożenia epidemiologicznego i promowanie niehigienicznych praktyk'. Wlepiają mandat na 500 zł.",
+                "choices": [
+                    {
+                        "text": "Zapłacić mandat (jakimś cudem masz tyle).",
+                        "condition": {
+                            "stats_greater_equal": {
+                                "hajs_w_kieszeni": 500
+                            }
+                        },
+                        "nextScene": "zaplacony_mandat_sanepid",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -500,
+                                "morale": -20,
+                                "wiara_w_gowno": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Spierdalać, nie mają prawa!",
+                        "nextScene": "ucieczka_przed_sanepidem",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "morale": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "seba_probuje_gowno": {
+                "id": "seba_probuje_gowno",
+                "description": "Seba bierze 'gryza'. Robi dziwną minę. 'Kurwa, Centuś... To... Wcale nie jest takie złe! Masz jeszcze?'",
+                "choices": [
+                    {
+                        "text": "Zostać ziomkami od gówna. Razem podbijecie świat!",
+                        "nextScene": "ziomki_od_gownia_z_seba",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 20,
+                                "morale": 15,
+                                "wiara_w_gowno": 15,
+                                "relacje_z_matka": -5
+                            }
+                        }
+                    },
+                    {
+                        "text": "To była podpucha. Spierdalać, zanim Seba się wkurwi.",
+                        "nextScene": "ucieczka_przed_seba",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -10,
+                                "morale": -5,
+                                "wiara_w_gowno": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "blog_o_gownie": {
+                "id": "blog_o_gownie",
+                "description": "Twój blog 'GównoPrawda24.pl' zdobywa nieoczekiwaną popularność. Sekcja komentarzy to festiwal hejtu i kilku fanatyków.",
+                "choices": [
+                    {
+                        "text": "Zostać królem internetowych gównoburzy.",
+                        "nextScene": "krol_gownoburzy_online",
+                        "effects": {
+                            "stats_change": {
+                                "skill_programowania": 10,
+                                "morale": 10,
+                                "szacun_w_kenie": 5,
+                                "relacje_z_matka": -10,
+                                "wiara_w_gowno": 20
+                            }
+                        }
+                    },
+                    {
+                        "text": "Usunąć bloga. To poszło za daleko.",
+                        "nextScene": "odpoczynek_w_parku",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "wiara_w_gowno": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "wspolna_modlitwa_gowniana_z_ksiedzem": {
+                "id": "wspolna_modlitwa_gowniana_z_ksiedzem",
+                "description": "Ksiądz proboszcz po 'sakramencie' doznaje objawienia. 'GÓWNO JEST ŚWIĘTE! MUSIMY ZBUDOWAĆ ŚWIĄTYNIĘ GÓWNA!'",
+                "choices": [
+                    {
+                        "text": "Razem budować Kult Gówna!",
+                        "nextScene": "budowa_kultu_z_ksiedzem",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 25,
+                                "wiara_w_gowno": 30,
+                                "szacun_na_dzielni": 20,
+                                "relacje_z_matka": -30,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    }
+                ]
+            },
+            "zaplacony_mandat_sanepid": {
+                "id": "zaplacony_mandat_sanepid",
+                "description": "Straciłeś kupę hajsu. Panie z Sanepidu ostrzegają, że następnym razem będzie gorzej. Może czas przystopować z tą misją?",
+                "choices": [
+                    {
+                        "text": "Tak, to koniec z gównem. Za drogo wychodzi.",
+                        "nextScene": "pobudka_w_chlewie",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "wiara_w_gowno": -25
+                            },
+                            "flags_set": {
+                                "apostol_smaku": false,
+                                "sanepid_ostrzega": false
+                            }
+                        }
+                    },
+                    {
+                        "text": "Nigdy! Gówno jest tego warte!",
+                        "nextScene": "dalsza_misja_nawracania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 10,
+                                "wiara_w_gowno": 15
+                            }
+                        }
+                    }
+                ]
+            },
+            "ziomki_od_gownia_z_seba": {
+                "id": "ziomki_od_gownia_z_seba",
+                "description": "Razem z Sebą prowadzicie badania nad 'optymalnym smakiem gówna'. Wasza melina staje się laboratorium.",
+                "choices": [
+                    {
+                        "text": "Spróbować sprzedawać 'Gówno Specjał' na rynku.",
+                        "nextScene": "handel_gownem_na_rynku",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -10,
+                                "szacun_na_dzielni": -20,
+                                "smrod_level": 20,
+                                "podejrzliwosc_psow": 15,
+                                "wiara_w_gowno": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "krol_gownoburzy_online": {
+                "id": "krol_gownoburzy_online",
+                "description": "Masz tysiące hejterów i wiernych fanów gówna. Twoje live'y z 'degustacji' biją rekordy. Jesteś sławny, choć trochę śmierdzisz.",
+                "choices": [
+                    {
+                        "text": "Jechać na zlot fanów gówna.",
+                        "nextScene": "zlot_fanow_gownia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 20,
+                                "szacun_na_dzielni": 10,
+                                "energia": -5,
+                                "hajs_w_kieszeni": 50
+                            }
+                        }
+                    }
+                ]
+            },
+            "budowa_kultu_z_ksiedzem": {
+                "id": "budowa_kultu_z_ksiedzem",
+                "description": "Z pomocą księdza powstaje 'Kościół Przenajświętszego Gówna'. Pielgrzymki walą drzwiami i oknami (i szambem).",
+                "choices": [
+                    {
+                        "text": "Ogłosić się Papieżem Gówna.",
+                        "nextScene": "papiez_gownia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 30,
+                                "wiara_w_gowno": 50,
+                                "szacun_na_dzielni": 30,
+                                "relacje_z_matka": -50
+                            }
+                        }
+                    }
+                ]
+            },
+            "handel_gownem_na_rynku": {
+                "id": "handel_gownem_na_rynku",
+                "description": "Wasze stoisko 'Gówniane Rarytasy Centusia i Seby' przyciąga głównie muchy i Sanepid.",
+                "choices": [
+                    {
+                        "text": "Spierdalać, zanim zamkną was obu.",
+                        "nextScene": "ucieczka_przed_sanepidem",
+                        "effects": {
+                            "stats_change": {
+                                "energia": -15,
+                                "morale": -20,
+                                "szacun_na_dzielni": -25,
+                                "wiara_w_gowno": -10
+                            }
+                        }
+                    }
+                ]
+            },
+            "zlot_fanow_gownia": {
+                "id": "zlot_fanow_gownia",
+                "description": "Na zlocie spotykasz ludzi jeszcze dziwniejszych od ciebie. Są konkursy na 'najlepszy aromat' i 'najciekawszą konsystencję'. Czujesz się jak w domu.",
+                "choices": [
+                    {
+                        "text": "Wygrać wszystkie konkursy i zostać legendą.",
+                        "nextScene": "legenda_zlotu_gownia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 25,
+                                "szacun_na_dzielni": 15,
+                                "wiara_w_gowno": 20,
+                                "smrod_level": 10
+                            }
+                        }
+                    }
+                ]
+            },
+            "papiez_gownia": {
+                "id": "papiez_gownia",
+                "description": "Jako Papież Gówna I prowadzisz swoich wiernych ku świetlanej, brązowej przyszłości. Watykan jest zaniepokojony.",
+                "choices": [
+                    {
+                        "text": "Amen (Gówniany koniec).",
+                        "nextScene": "koniec_swiata_z_gownem",
+                        "effects": {}
+                    }
+                ]
+            },
+            "legenda_zlotu_gownia": {
+                "id": "legenda_zlotu_gownia",
+                "description": "Jesteś niekwestionowanym Mistrzem Gówna. Fani noszą cię na rękach. Twoje słowa stają się gówno-ewangelią.",
+                "choices": [
+                    {
+                        "text": "Czas na podbój masowej publiczności! Gówno w TV!",
+                        "nextScene": "gowno_w_telewizji",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 20,
+                                "szacun_na_dzielni": 20,
+                                "hajs_w_kieszeni": 100,
+                                "wiara_w_gowno": 25
+                            }
+                        }
+                    }
+                ]
+            },
+            "nawracanie_meneli": {
+                "id": "nawracanie_meneli",
+                "description": "Menele początkowo sceptyczni ('lepszy denaturat'), ale po darmowej 'degustacji' przyznają, że 'całkiem pożywne'. Jeden nawet widzi Jezusa w kształcie klocka.",
+                "choices": [
+                    {
+                        "text": "Założyć komunę gównojadów z menelami.",
+                        "nextScene": "komuna_gownojadow_z_menelami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 15,
+                                "morale": 10,
+                                "wiara_w_gowno": 10,
+                                "smrod_level": 20,
+                                "stan_watraby": -10,
+                                "relacje_z_matka": -15
+                            }
+                        }
+                    },
+                    {
+                        "text": "Dać im spokój. Jeszcze cię okradną.",
+                        "nextScene": "dalsza_misja_nawracania",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -3,
+                                "energia": -2
+                            }
+                        }
+                    }
+                ]
+            },
+            "komuna_gownojadow_z_menelami": {
+                "id": "komuna_gownojadow_z_menelami",
+                "description": "Wasza komuna na wysypisku śmieci żyje zgodnie z naturą i cyklem trawiennym. Media zaczynają się interesować waszym 'ekstremalnym stylem życia'.",
+                "choices": [
+                    {
+                        "text": "Udzielić wywiadu 'Głosowi Janowa'. Sława!",
+                        "nextScene": "wywiad_dla_glosu_janowa",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": 20,
+                                "morale": 15,
+                                "podejrzliwosc_psow": 10,
+                                "wiara_w_gowno": 5
+                            }
+                        }
+                    },
+                    {
+                        "text": "Odpędzić dziennikarzy. To nasza święta ziemia (gówna)!",
+                        "nextScene": "obrona_komuny_przed_mediami",
+                        "effects": {
+                            "stats_change": {
+                                "szacun_na_dzielni": -10,
+                                "morale": -5,
+                                "energia": -5
+                            }
+                        }
+                    }
+                ]
+            },
+            "wywiad_dla_glosu_janowa": {
+                "id": "wywiad_dla_glosu_janowa",
+                "description": "Artykuł 'Gówniarze z Wysypiska: Zagrożenie czy Nowa Filozofia?' staje się hitem. Jedni was podziwiają, inni chcą was spalić.",
+                "choices": [
+                    {
+                        "text": "Przygotować się na oblężenie.",
+                        "nextScene": "oblezenie_komuny_gownojadow",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "energia": 10,
+                                "podejrzliwosc_psow": 20
+                            }
+                        }
+                    }
+                ]
+            },
+            "obrona_komuny_przed_mediami": {
+                "id": "obrona_komuny_przed_mediami",
+                "description": "Rzucacie w dziennikarzy... no cóż, tym co macie pod ręką. Uciekają w popłochu, ale zdjęcia trafią do gazet.",
+                "choices": [
+                    {
+                        "text": "Przygotować się na odwet społeczeństwa.",
+                        "nextScene": "oblezenie_komuny_gownojadow",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -15,
+                                "energia": 5,
+                                "podejrzliwosc_psow": 25,
+                                "szacun_na_dzielni": -15
+                            }
+                        }
+                    }
+                ]
+            },
+            "oblezenie_komuny_gownojadow": {
+                "id": "oblezenie_komuny_gownojadow",
+                "description": "Mieszkańcy Janowa z widłami i pochodniami otaczają waszą komunę. Sytuacja jest, nomen omen, gówniana.",
+                "choices": [
+                    {
+                        "text": "Walczyć do ostatniego klocka!",
+                        "nextScene": "ostateczna_bitwa_o_gowno",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 20,
+                                "energia": -30,
+                                "moc_bicka_centusia": 5,
+                                "stan_watraby": -10
+                            }
+                        }
+                    },
+                    {
+                        "text": "Negocjować. Może dadzą wam azyl w szambie miejskim?",
+                        "nextScene": "negocjacje_z_tlumem_o_gowno",
+                        "effects": {
+                            "stats_change": {
+                                "morale": -10,
+                                "skill_programowania": -5,
+                                "szacun_na_dzielni": -20
+                            }
+                        }
+                    }
+                ]
+            },
+            "gowno_w_telewizji": {
+                "id": "gowno_w_telewizji",
+                "description": "Twój program 'Kuchenne Rewolucje Gówniane z Centusiem' w TVP Janów bije rekordy oglądalności. Niestety, sanepid też ogląda.",
+                "choices": [
+                    {
+                        "text": "Spierdalać z kraju zanim zamkną telewizję i ciebie.",
+                        "nextScene": "ucieczka_z_kraju_przed_sanepidem_tv",
+                        "effects": {
+                            "stats_change": {
+                                "hajs_w_kieszeni": -200,
+                                "morale": -20,
+                                "podejrzliwosc_psow": 30
+                            }
+                        }
+                    },
+                    {
+                        "text": "Ogłosić ogólnopolski dzień degustacji gówna.",
+                        "nextScene": "ogolnopolski_dzien_gownia",
+                        "effects": {
+                            "stats_change": {
+                                "morale": 25,
+                                "szacun_na_dzielni": 30,
+                                "wiara_w_gowno": 30,
+                                "stan_watraby": -15
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "endings": {
+            "krol_gownojadow_janowa": {
+                "requirements": {
+                    "flags_all": [
+                        "zjadl_gowno",
+                        "apostol_smaku"
+                    ],
+                    "stats_greater_equal": {
+                        "szacun_na_dzielni": 50,
+                        "smrod_level": 60,
+                        "wiara_w_gowno": 50
+                    }
+                },
+                "description": "Zostałeś Królem Gównojadów Janowa. Ludzie cię omijają, ale masz kilku wiernych (i śmierdzących) wyznawców. Nawet Burek czasami przynosi ci 'dary'.",
+                "achievement": "Prorok Gówna Najwyższego"
+            },
+            "wieczny_student_kena": {
+                "requirements": {
+                    "stats_lower_equal": {
+                        "skill_programowania": 30,
+                        "szacun_w_kenie": -50
+                    },
+                    "stats_greater_equal": {
+                        "kac_power": 20
+                    }
+                },
+                "description": "Ujebałeś 4 klasę. Znowu. Twoje zdjęcie wisi w gablocie 'Wieczni Uczniowie KEN'. Matka cię wydziedziczyła. Przynajmniej masz więcej czasu na picie.",
+                "achievement": "Magister Meliniarstwa Stosowanego"
+            },
+            "seba_cie_dojechal": {
+                "requirements": {
+                    "flags_all": [
+                        "ma_dlugi_u_sebixa"
+                    ],
+                    "stats_lower_equal": {
+                        "hajs_w_kieszeni": 0,
+                        "moc_bicka_centusia": 5
+                    }
+                },
+                "description": "Seba cię w końcu dopadł za te długi. Masz podbite oko i zero zębów. Ale przynajmniej nauczyłeś się szybko biegać... na krótkich dystansach.",
+                "achievement": "Złoty Ząb od Seby (Nieistniejący)"
+            },
+            "mistrz_drugiego_kilo": {
+                "requirements": {
+                    "stats_greater_equal": {
+                        "moc_bicka_centusia": 50,
+                        "energia": 60
+                    },
+                    "inventory_contains": "hantla_2kg_rdzewiejaca"
+                },
+                "description": "Dzięki codziennemu machaniu tą jedną, zardzewiałą hantlą, twój prawy biceps wygląda jak u Pudziana (lewy jak u suchoklatesa). Wygrywasz lokalne zawody w siłowaniu na rękę. Nazywają cię 'Jednoręki Bandyta'.",
+                "achievement": "Prawy Hak Janowa"
+            },
+            "ucieczka_z_cyrkiem_na_mountain_dew": {
+                "requirements": {
+                    "flags_all": [
+                        "zjadl_gowno"
+                    ],
+                    "condition_or": [
+                        {
+                            "flags_all": [
+                                "ma_jeszcze_mountain_dew"
+                            ]
+                        },
+                        {
+                            "inventory_contains": "polowa_mountain_dew"
+                        }
+                    ],
+                    "stats_greater_equal": {
+                        "smrod_level": 40,
+                        "skill_cs": 10
+                    }
+                },
+                "description": "Twój smród i opowieści o Złotym Kebie przyciągnęły uwagę przejezdnego cyrku. Zostałeś 'Człowiekiem-Zagadką Co To Kurwa Jest?!'. Płacą ci w Mountain Dew. To chyba sukces.",
+                "achievement": "Najdziwniejszy Cyrkowiec Wschodu"
+            },
+            "hltv_milioner": {
+                "requirements": {
+                    "flags_all": [
+                        "wygral_zaklad_hltv"
+                    ],
+                    "stats_greater_equal": {
+                        "hajs_w_kieszeni": 10000
+                    }
+                },
+                "description": "Postawiłeś cały swój skromny majątek na jakiś chujowy meczyk na HLTV... i wygrałeś! Kupiłeś sobie nową Gardene i otworzyłeś własną budę z kebabem. Tym razem bez gówna.",
+                "achievement": "Od Zera Do Kebaba"
+            },
+            "ocalal_watrobe_na_styk": {
+                "requirements": {
+                    "stats_greater_equal": {
+                        "stan_watraby": 5,
+                        "relacje_z_matka": 25
+                    },
+                    "stats_lower_equal": {
+                        "kac_power": 5,
+                        "stan_watraby": 20
+                    }
+                },
+                "description": "Po interwencji matki i strachu przed marskością, ograniczyłeś chlanie. Wątroba jakoś zipie. Może jeszcze nie wszystko stracone. Czasami tylko lekko cię telepie.",
+                "achievement": "Krok od Delirki"
+            },
+            "milosc_zycia_w_zabce": {
+                "requirements": {
+                    "condition_or": [
+                        {
+                            "flags_all": [
+                                "ma_jeszcze_mountain_dew"
+                            ]
+                        },
+                        {
+                            "scene_id_visited": "mountain_dew_dla_julki"
+                        }
+                    ],
+                    "stats_greater_equal": {
+                        "morale": 50,
+                        "szacun_na_dzielni": 20
+                    },
+                    "scene_id_visited": "randka_z_julka"
+                },
+                "description": "Julka doceniła twój romantyzm i Mountain Dew. Zostaliście parą. Co weekend robicie napady na Żabkę, a potem pijecie energetyki na dachu KENa.",
+                "achievement": "Romeo i Julia z Janowa"
+            },
+            "krol_programowania_kena": {
+                "requirements": {
+                    "stats_greater_equal": {
+                        "skill_programowania": 50,
+                        "szacun_w_kenie": 30
+                    },
+                    "scene_id_visited": "wygrana_konkursu"
+                },
+                "description": "Wygrałeś wszystkie konkursy programowania w KENie. Nauczyciele podejrzewają oszustwo, ale nie mają dowodów. Jesteś żywą legendą.",
+                "achievement": "Haker Janowa Podlaskiego"
+            },
+            "przywodca_dresow": {
+                "requirements": {
+                    "stats_greater_equal": {
+                        "szacun_na_dzielni": 60,
+                        "podejrzliwosc_psow": 40
+                    },
+                    "scene_id_visited": "planowanie_napadu"
+                },
+                "description": "Zostałeś przywódcą lokalnych dresów. Teraz to ty rozdajesz karty w Janowie. Nawet psy się kłaniają.",
+                "achievement": "Król Ulicy Bandosa"
+            },
+            "papiez_gowniany": {
+                "requirements": {
+                    "flags_all": [
+                        "apostol_smaku",
+                        "ksiadz_zna_herezje",
+                        "zjadl_gowno"
+                    ],
+                    "stats_greater_equal": {
+                        "wiara_w_gowno": 100,
+                        "szacun_na_dzielni": 70,
+                        "morale": 50
+                    },
+                    "scene_id_visited": "papiez_gownia"
+                },
+                "description": "Jako Papież Gówna I, zjednoczyłeś wiernych pod znakiem brązowej komety. Twoje kazania są transmitowane na cały świat. Watykan ogłosił cię Antychrystem, ale kogo to obchodzi, gdy masz armię gównojadów?",
+                "achievement": "Papież Gówna I – Nowy Porządek Świata"
+            },
+            "celebryta_od_gownianych_rewolucji": {
+                "requirements": {
+                    "flags_all": [
+                        "apostol_smaku"
+                    ],
+                    "stats_greater_equal": {
+                        "wiara_w_gowno": 70,
+                        "szacun_na_dzielni": 50,
+                        "hajs_w_kieszeni": 200
+                    },
+                    "scene_id_visited": "gowno_w_telewizji"
+                },
+                "description": "Twoje 'Kuchenne Rewolucje Gówniane' stały się międzynarodowym hitem. Jesteś jebanym Gordonem Ramsayem odchodów. Ludzie płacą krocie za twoje 'przepisy'. Sanepid cię nienawidzi, ale hajs się zgadza.",
+                "achievement": "MasterChef Gówna"
+            },
+            "wygnaniec_z_janowa": {
+                "requirements": {
+                    "flags_all": [
+                        "sanepid_ostrzega",
+                        "ksiadz_zna_herezje"
+                    ],
+                    "stats_lower_equal": {
+                        "relacje_z_matka": -50,
+                        "szacun_na_dzielni": -50,
+                        "hajs_w_kieszeni": 0
+                    }
+                },
+                "description": "Matka cię wydziedziczyła, ksiądz rzucił klątwę, sanepid ściga, a Seba dalej chce ci wpierdolić. Musiałeś spierdalać z Janowa na pace ciężarówki z kapustą. Gówniana odyseja dobiegła końca... na razie.",
+                "achievement": "Persona non Grata (dosłownie)"
+            },
+            "koniec_swiata_z_gownem": {
+                "requirements": {
+                    "scene_id_visited": "papiez_gownia"
+                },
+                "description": "Pod twoim gówno-przewodnictwem, świat pogrążył się w brązowym chaosie. Koniec jest bliski, ale przynajmniej pachnie... znajomo.",
+                "achievement": "Apokalipsa w Odcieniach Brązu"
+            },
+            "ostateczna_bitwa_o_gowno": {
+                "requirements": {
+                    "scene_id_visited": "ostateczna_bitwa_o_gowno"
+                },
+                "description": "Walczyliście dzielnie, ale tłum był zbyt liczny. Twoja komuna została zniszczona, a ty skończyłeś w kaftanie bezpieczeństwa. Ale przynajmniej jedzenie w psychiatryku nie jest takie złe.",
+                "achievement": "Męczennik za Sprawę Gówna"
+            },
+            "negocjacje_z_tlumem_o_gowno": {
+                "requirements": {
+                    "scene_id_visited": "negocjacje_z_tlumem_o_gowno"
+                },
+                "description": "Wójt zgodził się na wasz 'azyl' w miejskim szambie, pod warunkiem, że nigdy więcej nie wyjdziecie na powierzchnię. Przynajmniej macie nieograniczony dostęp do 'surowca'.",
+                "achievement": "Król Szamba"
+            },
+            "ucieczka_z_kraju_przed_sanepidem_tv": {
+                "requirements": {
+                    "scene_id_visited": "ucieczka_z_kraju_przed_sanepidem_tv"
+                },
+                "description": "Zostałeś międzynarodowym uchodźcą kulinarnym. Twoje programy są puszczane w darknecie. Żyjesz w ciągłym strachu, ale przynajmniej masz kasę na najlepsze gówno z importu.",
+                "achievement": "Międzynarodowy Terrorysta Kulinarny"
+            },
+            "ogolnopolski_dzien_gownia": {
+                "requirements": {
+                    "scene_id_visited": "ogolnopolski_dzien_gownia"
+                },
+                "description": "Polska oszalała na punkcie gówna! Wszyscy degustują, eksperymentują. Ekonomiści mówią o 'gównianym boomie'. Jesteś bohaterem narodowym... i biologicznym zagrożeniem.",
+                "achievement": "Gówniany Bohater Narodowy"
+            }
+        }
+    }
+}

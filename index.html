@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waldek: Odyseja na Ostro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Waldek: Odyseja na Ostro</h1>
+        </header>
+        <div class="main-layout">
+            <aside class="side-left">
+                <div class="inventory panel" id="inventory">
+                    <h2>Ekwipunek</h2>
+                    <ul id="inventory-list"></ul>
+                </div>
+                <div class="log panel">
+                    <h2>Dziennik zdarzeń</h2>
+                    <ul id="event-log"></ul>
+                </div>
+            </aside>
+            <main class="center">
+                <div class="center-panel panel" id="center-panel">
+                    <div class="scene" id="scene">
+                        <!-- Opis sceny -->
+                    </div>
+                    <div class="choices" id="choices">
+                        <!-- Wybory -->
+                    </div>
+                    <div class="waldek-img-container">
+                        <img id="waldek-img" src="waldki/zielony_waldek.png" alt="Waldek" />
+                    </div>
+                </div>
+            </main>
+            <aside class="side-right">
+                <div class="stats panel" id="stats">
+                    <!-- Statystyki gracza jako progressbary -->
+                </div>
+            </aside>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
